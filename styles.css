@@ -39,21 +39,23 @@ span, p{
   letter-spacing: normal;
   font-size: 1.0625rem;
 }
+
 /* --- Header --- */
+header div.container{
+  display: flex;
+  justify-content: space-between
+}
 header .nav-bar ul{
   display:none;
 }
 header .slack-logo{
   height: 52px;
-  float: left;
 }
 header .burger-menu-icon{
   height: 42px;
   padding:10px 0 0;
-  float: right;
 }
 header.cabecera{
-  overflow: hidden;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -70,7 +72,7 @@ section.presentacion button{
   border:none;
   border-radius:5px;
   width:100%;
-  padding: 20px 40px;
+  padding: 20px;
   color:white;
   text-transform:uppercase;
   font-style:bold;
@@ -79,13 +81,19 @@ section.presentacion button{
 }
 
 /* ---  SECTION 2 --- */
+/*section.valores{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}*/
 section.valores article img{
   height:60px;
   margin-bottom:10px;
 }
 section.valores footer a{
   text-align:center;
-  display:block;
+  display:inline-block;
+  margin: 0 auto;
   font-weight:600;
   text-decoration: none;
   border-bottom:1px solid #3f46ad;
@@ -100,7 +108,7 @@ section.empresas article{
 section.empresas article header{
   padding:20px 33% 20px 20px;
 }
-}
+
 section.empresas article span{
   color: #323648;
   font-size: 1rem;
@@ -110,7 +118,9 @@ section.empresas article .foto-noticia{
   width: 100%;
 }
 section.empresas article div.mas-info{
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 5%;
 }
 section.empresas article div.mas-info span{
@@ -120,7 +130,6 @@ section.empresas article div.mas-info span{
 }
 .burger-mas-info{
   height: 20px;
-  float: right;
 }
 
 /* --- SECTION 3 FOOTER LOGOS --- */
@@ -199,3 +208,22 @@ footer.footer-final img{
   color:#6d6f7b;
   font-style:bold;
  }
+
+/* ---- ANTIRESPONSIVE PARA TABLET --- */
+@media(min-width: 768px){
+  
+  h1{
+   font-size: 4rem;
+ } 
+ .container{
+   margin: 0 35px;
+ }
+ section.presentacion button{
+   width: auto;
+   max-width: 320px;
+ }
+}
+/* ---- ANTIRESPONSIVE PARA DESKTOP--- */
+@media(min-width: 1024px){
+
+}
